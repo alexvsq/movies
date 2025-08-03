@@ -1,0 +1,449 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/cWO5NDkKqpOuwxu4vFc4PtL8aNF.jpg",
+            "id": 241388,
+            "name": "Eyes of Wakanda",
+            "original_name": "Eyes of Wakanda",
+            "overview": "Follow the adventures of brave Wakandan warriors throughout history in this globe-trotting adventure where they must carry-out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story.",
+            "poster_path": "/yuOfb1MgnaGPa4guzV0n1IFYVGN.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                16,
+                10759,
+                10765
+            ],
+            "popularity": 21.6645,
+            "first_air_date": "2025-08-01",
+            "vote_average": 4.6,
+            "vote_count": 14,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mwVrLbaue8AqjFtF6lY6aakTtfb.jpg",
+            "id": 196890,
+            "name": "Chief of War",
+            "original_name": "Chief of War",
+            "overview": "With Hawaii's four kingdoms divided by war, the ferocious warrior Kaʻiana embarks on an epic mission to unite his people—as an existential threat approaches their shores.",
+            "poster_path": "/ma6qEIEqrNE6lPQXE8BW5iNVxLd.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 15.3184,
+            "first_air_date": "2025-07-31",
+            "vote_average": 6.3,
+            "vote_count": 11,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uxrP5yB9h6Dh6SbojI018pMYIIH.jpg",
+            "id": 90802,
+            "name": "The Sandman",
+            "original_name": "The Sandman",
+            "overview": "After years of imprisonment, Morpheus — the King of Dreams — embarks on a journey across worlds to find what was stolen from him and restore his power.",
+            "poster_path": "/vfJ1nBnqiiRWZWv3ZvtFWO5zccg.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                10765,
+                18,
+                10759
+            ],
+            "popularity": 121.8364,
+            "first_air_date": "2022-08-05",
+            "vote_average": 7.914,
+            "vote_count": 2299,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xmDhagFdAfbkDFL6YpV3Vfe9OMl.jpg",
+            "id": 133748,
+            "name": "Twisted Metal",
+            "original_name": "Twisted Metal",
+            "overview": "A motor-mouthed outsider with no memory of his past is offered a chance at a better life, but only if he can successfully deliver a mysterious package across a post-apocalyptic wasteland. With the help of a badass axe-wielding car thief, he’ll face savage marauders driving vehicles of destruction and other dangers of the open road, including a deranged clown who drives an all too familiar ice cream truck.",
+            "poster_path": "/3Zr9qJXqHQwi9IyPBDwukgg1jcZ.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                10759,
+                35
+            ],
+            "popularity": 51.1463,
+            "first_air_date": "2023-07-27",
+            "vote_average": 7.855,
+            "vote_count": 400,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/l5jzuehwynnoEWUb9z25auHXQM.jpg",
+            "id": 259909,
+            "name": "Dexter: Resurrection",
+            "original_name": "Dexter: Resurrection",
+            "overview": "Dexter Morgan awakens from a coma to find Harrison gone without a trace. Realizing the weight of what he put his son through, Dexter sets out for New York City, determined to find him and make things right. But closure won't come easy. When Miami Metro's Angel Batista arrives with questions, Dexter realizes his past is catching up to him fast. As father and son navigate their own darkness in the city that never sleeps, they soon find themselves deeper than they ever imagined - and that the only way out is together.",
+            "poster_path": "/hIawSocuwqgNeRf3JuKuxgMHmSC.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "popularity": 80.8133,
+            "first_air_date": "2025-07-13",
+            "vote_average": 9.1,
+            "vote_count": 87,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/627K48naKH2Y3Rz47Ydra4qktdI.jpg",
+            "id": 103516,
+            "name": "Star Trek: Strange New Worlds",
+            "original_name": "Star Trek: Strange New Worlds",
+            "overview": "Follow Captain Christopher Pike, Science Officer Spock and Number One in the years before Captain Kirk boarded the U.S.S. Enterprise, as they explore new worlds around the galaxy.",
+            "poster_path": "/w6KapI2JvrCkOPmQhkwYPJNjqeo.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                10765
+            ],
+            "popularity": 60.5881,
+            "first_air_date": "2022-05-05",
+            "vote_average": 8.082,
+            "vote_count": 631,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6WAinokBmZU9Jt8l74TKI8JNUG7.jpg",
+            "id": 2190,
+            "name": "South Park",
+            "original_name": "South Park",
+            "overview": "Follow the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+            "poster_path": "/dqAKFEjPEu7vWkVBkMdhGu9ifxU.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                16,
+                35
+            ],
+            "popularity": 163.3137,
+            "first_air_date": "1997-08-13",
+            "vote_average": 8.358,
+            "vote_count": 4609,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/maxJ6oaC3tgO0lUiudLCLN4FPS8.jpg",
+            "id": 293808,
+            "name": "Marked",
+            "original_name": "Marked",
+            "overview": "Desperate to pay for her daughter's life-saving surgery, devout ex-cop Babalwa turns to an unholy savior to help her stage a daring heist.",
+            "poster_path": "/1XFP7vl4KDAuCNOdtq8lFm5LeSW.jpg",
+            "media_type": "tv",
+            "original_language": "zu",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 18.4012,
+            "first_air_date": "2025-07-31",
+            "vote_average": 5.5,
+            "vote_count": 2,
+            "origin_country": [
+                "ZA"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/i5qNKvdBkVAJvJZRkkzSvQxrAL2.jpg",
+            "id": 252751,
+            "name": "Leanne",
+            "original_name": "Leanne",
+            "overview": "When her husband leaves her for another woman, a resilient Southern mom starts over with the support of her loving, but unfiltered family.",
+            "poster_path": "/sILKrYhFK6bedXgDggQD3GmGUUV.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                35
+            ],
+            "popularity": 22.1548,
+            "first_air_date": "2025-07-31",
+            "vote_average": 10,
+            "vote_count": 3,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/k6Yg53yBdsfZeRLJh0WgrG2P11f.jpg",
+            "id": 91097,
+            "name": "Ling Cage",
+            "original_name": "灵笼",
+            "overview": "In the near future, human inhabitants would have been crowded and congested. It was an urgency to stride out to the universe and find a new home. When everything was under progress in an orderly way, dramatic geological transformations erupted over the courses of decades. Humanity was demolished by this disaster and hardly left anything. Until the nature gradually restored calm, people struggled to their feet from ruins and abysses, stepping again onto this familiar but strange earth. But for us people, dominating everything has been rooted into our blood. Are we still masters of this new world?",
+            "poster_path": "/p65f4XPIneEjFhASI9HuJId3D3d.jpg",
+            "media_type": "tv",
+            "original_language": "zh",
+            "genre_ids": [
+                16,
+                10765,
+                10759,
+                18,
+                9648
+            ],
+            "popularity": 43.2363,
+            "first_air_date": "2019-07-13",
+            "vote_average": 8.27,
+            "vote_count": 63,
+            "origin_country": [
+                "CN"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oUisxaYRPuIehH6hkUIMcZNIuTA.jpg",
+            "id": 93740,
+            "name": "Foundation",
+            "original_name": "Foundation",
+            "overview": "Follow a band of exiles on their monumental journey to save humanity and rebuild civilization amid the fall of the Galactic Empire.",
+            "poster_path": "/tg9I5pOY4M9CKj8U0cxVBTsm5eh.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                10765,
+                18
+            ],
+            "popularity": 91.3514,
+            "first_air_date": "2021-09-23",
+            "vote_average": 7.8,
+            "vote_count": 1431,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/9q7uryMCmAun2bGXoP3Liw24mpz.jpg",
+            "id": 296834,
+            "name": "Nine Yin True Sutra",
+            "original_name": "华山论剑",
+            "overview": "",
+            "poster_path": "/gwHpqRxpe0o0pDmDZK7V8RVMhTJ.jpg",
+            "media_type": "tv",
+            "original_language": "zh",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 11.5731,
+            "first_air_date": "2025-07-26",
+            "vote_average": 5,
+            "vote_count": 4,
+            "origin_country": [
+                "CN"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sU03jP3DpUG86IJDmbSyR5gTLel.jpg",
+            "id": 290276,
+            "name": "Unspeakable Sins",
+            "original_name": "Pecados inconfesables",
+            "overview": "A woman in a controlling marriage finds solace — and revenge — in an affair with a younger man, until it spirals into a dangerous fight for survival.",
+            "poster_path": "/30eSqR2XPGz53eGElt6YAvH7cPX.jpg",
+            "media_type": "tv",
+            "original_language": "es",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 30.8235,
+            "first_air_date": "2025-07-30",
+            "vote_average": 3.833,
+            "vote_count": 3,
+            "origin_country": [
+                "MX"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uNTrRKIOyKYISthoeizghtXPEOK.jpg",
+            "id": 240411,
+            "name": "Dan Da Dan",
+            "original_name": "ダンダダン",
+            "overview": "In a bet to prove whether ghosts or aliens exist, two high schoolers face terrifying paranormal threats, gain superpowers and maybe even fall in love?!",
+            "poster_path": "/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
+            "media_type": "tv",
+            "original_language": "ja",
+            "genre_ids": [
+                16,
+                10759,
+                35,
+                10765
+            ],
+            "popularity": 114.6174,
+            "first_air_date": "2024-10-04",
+            "vote_average": 8.644,
+            "vote_count": 581,
+            "origin_country": [
+                "JP"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/bqtIpYB9sfWJ0jGmSSGXiATD4ew.jpg",
+            "id": 253955,
+            "name": "The Wanted Detective",
+            "original_name": "定风波",
+            "overview": "Framed as the notorious Night Devil on his wedding day, top detective Xiao Beiming is accused of murder and treason, forcing him to flee. Three years later, he returns to the capital, earning the trust of his apprentice sister, Zhong Xueman. With a team of fearless allies, he unravels a series of mysterious cases, to expose the real Night Devil and restore order to Da Qi.",
+            "poster_path": "/jd105sxPMO3KfuMUI1RecTeG6K5.jpg",
+            "media_type": "tv",
+            "original_language": "zh",
+            "genre_ids": [
+                18,
+                9648
+            ],
+            "popularity": 2.5901,
+            "first_air_date": "2025-08-01",
+            "vote_average": 0,
+            "vote_count": 0,
+            "origin_country": [
+                "CN"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sHvTsXSWxuW7hoXAqWM4lBLJI50.jpg",
+            "id": 116450,
+            "name": "And Just Like That…",
+            "original_name": "And Just Like That…",
+            "overview": "This new chapter of “Sex and the City” follows Carrie, Miranda and Charlotte as they navigate the journey from the complicated reality of life and friendship in their 30s to the even more complicated reality of life and friendship in their 50s.",
+            "poster_path": "/2b6E0pN19IGsmxSv6HyTKydKKdb.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "popularity": 35.3713,
+            "first_air_date": "2021-12-09",
+            "vote_average": 7.332,
+            "vote_count": 506,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2gfOS8A4gBAf8O9SjpgZIc2Z5yI.jpg",
+            "id": 215995,
+            "name": "Smoke",
+            "original_name": "Smoke",
+            "overview": "When an arson investigator begrudgingly teams up with a police detective, their race to stop two arsonists ignites a twisted game of secrets and suspicions.",
+            "poster_path": "/p789YfZtMqe3ErII3t61FWmAaFQ.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                18,
+                80
+            ],
+            "popularity": 54.9307,
+            "first_air_date": "2025-06-26",
+            "vote_average": 5.6,
+            "vote_count": 31,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oGsh97JAA6LYu92B6TEswrjac8W.jpg",
+            "id": 248852,
+            "name": "UNTAMED",
+            "original_name": "UNTAMED",
+            "overview": "In the vast expanse of Yosemite National Park, a woman's death draws a federal agent into lawless terrain — where nature obeys no rules but its own.",
+            "poster_path": "/tclYY8RGieQwkJXDxZGf505Zybr.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                9648,
+                18
+            ],
+            "popularity": 80.1702,
+            "first_air_date": "2025-07-17",
+            "vote_average": 7.367,
+            "vote_count": 154,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
+            "id": 119051,
+            "name": "Wednesday",
+            "original_name": "Wednesday",
+            "overview": "Wednesday Addams is sent to Nevermore Academy, a bizarre boarding school where she attempts to master her psychic powers, stop a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago — all while navigating her new relationships.",
+            "poster_path": "/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+            "media_type": "tv",
+            "original_language": "en",
+            "genre_ids": [
+                10765,
+                9648,
+                35
+            ],
+            "popularity": 66.486,
+            "first_air_date": "2022-11-23",
+            "vote_average": 8.415,
+            "vote_count": 9193,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sbCiZJJEsXEZ7kcZ7oVgQySuRJa.jpg",
+            "id": 235351,
+            "name": "The Legend of Heroes",
+            "original_name": "金庸武侠世界",
+            "overview": "In the late Southern Song Dynasty, as the Jin forces invaded, the Guo and Yang families faced tragedy. Taoist Qiu Chuji and the Seven Freaks of Jiangnan bet to train their descendants in martial arts. Guo Jing and Yang Kang, growing up under different circumstances, face various challenges. Guo Jing and Huang Rong develop a relationship amid turmoil, while Yang Kang's actions affect those around him.",
+            "poster_path": "/wH4FRYfVpQTxwemrdCRiPYEu98K.jpg",
+            "media_type": "tv",
+            "original_language": "zh",
+            "genre_ids": [
+                10759,
+                18
+            ],
+            "popularity": 35.6129,
+            "first_air_date": "2024-06-17",
+            "vote_average": 7.3,
+            "vote_count": 9,
+            "origin_country": [
+                "CN"
+            ]
+        }
+    ],
+    "total_pages": 500,
+    "total_results": 10000
+}

@@ -1,9 +1,9 @@
 import { Play, Star } from 'lucide-react';
-import DATA_FAKE from '@/data/DATA_FAKE.json'
+import DATA_MOVIE from '@/data/DATA_MOVIES.json'
 import { cutLargeText } from '@/lib/cutLargeText'
 
 const baseUrl = process.env.BASE_URL
-const MOVIE = DATA_FAKE.results[2]
+const MOVIE = DATA_MOVIE.results[2]
 
 export default function HeroMovie() {
 
@@ -56,7 +56,7 @@ export default function HeroMovie() {
 
             <div className='flex justify-between w-full h-full p-4'>
               {
-                DATA_FAKE.results.slice(0, 6).map((movie, index) =>
+                DATA_MOVIE.results.slice(0, 6).map((movie, index) =>
                   <article key={index}
                     className={`rounded-lg overflow-hidden cursor-pointer group  ${index == 2 ? 'scale-125 border-4 border-white/20' : ''}`}>
                     <img

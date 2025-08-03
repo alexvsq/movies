@@ -1,8 +1,8 @@
-import { Clapperboard } from 'lucide-react';
-import DATA_FAKE from '@/data/DATA_MOVIES.json'
-import CarouselItems from '@/components/shared/CarouselMovies'
+import { Tv } from 'lucide-react';
+import DATA_FAKE from '@/data/DATA_TV.json'
+import CarouselTv from '@/components/shared/CarouselTv'
 
-export default function Movies() {
+export default function Series() {
 
 
     return (
@@ -10,8 +10,8 @@ export default function Movies() {
 
             <header className='flex justify-between py-2 container-dynamic'>
                 <div className='flex items-center gap-2'>
-                    <Clapperboard />
-                    <h3 className='text-xl'>Movies</h3>
+                    <Tv />
+                    <h3 className='text-xl'>Series</h3>
                 </div>
 
                 <a href="/">
@@ -21,7 +21,7 @@ export default function Movies() {
                 </a>
             </header>
 
-            <CarouselItems items={DATA_FAKE.results} />
+            <CarouselTv items={DATA_FAKE.results} />
 
         </section>
     )
