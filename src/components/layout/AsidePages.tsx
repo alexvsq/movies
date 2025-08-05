@@ -1,10 +1,25 @@
+import Separator from "@/components/ui/Separator";
+import OrderBy from "./filters/sortBy";
+import Genres from "./filters/Genres";
+import TimeRange from "./filters/timeRange";
+import UserScore from "./filters/userScore";
+
 export default function AsidePages() {
   return (
-    <aside className="col-span-1 bg-red-500 h-fit">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias distinctio
-      modi tenetur porro quia debitis quo similique exercitationem ullam
-      quibusdam quae, error architecto fugit, facilis praesentium velit
-      repudiandae possimus dolore!
+    <aside className="col-span-1 bg-white/5 rounded-xl p-4 h-fit">
+      <OrderBy />
+
+      <Separator />
+
+      <Genres />
+
+      <Separator />
+
+      <UserScore />
+
+      <Separator />
+
+      <TimeRange />
     </aside>
   );
 }

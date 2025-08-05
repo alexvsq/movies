@@ -1,17 +1,28 @@
-export type tvType = {
-  adult: boolean;
-  backdrop_path: string;
-  id: number;
-  name: string;
-  original_name: string;
-  overview: string;
-  poster_path: string;
-  media_type: "tv" | "movie" | string; // puedes ajustarlo si solo es 'tv'
-  original_language: string;
-  genre_ids: number[];
-  popularity: number;
-  first_air_date: string; // puedes usar Date si lo vas a parsear
-  vote_average: number;
-  vote_count: number;
-  origin_country: string[];
-};
+import { z } from "zod";
+
+export const tvSchema = z.object({
+  adult: z.boolean(),
+  backdrop_path: z.string().nullable(),
+  id: z.number(),
+  name: z.string(),
+  original_name: z.string(),
+  overview: z.string(),
+  poster_path: z.string().nullable(),
+  media_type: z.any(),
+  original_language: z.string(),
+  genre_ids: z.array(z.number()),
+  popularity: z.number(),
+  first_air_date: z.string(),
+  vote_average: z.number(),
+  vote_count: z.number(),
+  origin_country: z.array(z.string()),
+});
+export type TvType = z.infer<typeof tvSchema>;
+
+export const resultTvSchema = z.object({
+  page: z.number(),
+  results: z.array(tvSchema),
+  total_pages: z.number(),
+  total_results: z.number(),
+});
+export type ResultTvType = z.infer<typeof resultTvSchema>;

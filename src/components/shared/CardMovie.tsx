@@ -3,8 +3,6 @@ import { cutLargeText } from "@/lib/cutLargeText";
 import { Star } from "lucide-react";
 import Link from "next/link";
 
-const baseUrl = process.env.BASE_URL;
-
 interface CardItemProps {
   item: MovieType;
 }
@@ -20,11 +18,15 @@ export default function CardItem({ item }: CardItemProps) {
       className="w-full max-w-[200px]"
     >
       <div className="w-full h-[300px] rounded-lg overflow-hidden group cursor-pointer  hover:-translate-y-2 transition">
-        <img
-          src={baseUrl + "p/w500" + item.poster_path}
-          alt={item.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition"
-        />
+        {item.poster_path ? (
+          <img
+            src={item.poster_path}
+            alt={item.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-200 "></div>
+        )}
       </div>
       <p className="text-lg font-medium">{shortTitle}</p>
       <footer className="flex justify-between items-center text-sm">

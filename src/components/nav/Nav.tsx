@@ -1,6 +1,7 @@
 import Logo from "@/components/shared/Logo";
 import { Search } from "lucide-react";
 import NavItems from "./navItems";
+import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -11,7 +12,9 @@ export default function Nav() {
         <aside className="flex items-center gap-8">
           <NavItems />
           <div className="w-[1px] h-5 bg-white" />
-          <Search />
+          <Link href="/search">
+            <Search />
+          </Link>
         </aside>
       </nav>
     </div>

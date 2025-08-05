@@ -1,13 +1,14 @@
-import HeroMovie from '@/components/home/heroMovie/Hero'
-import Separator from '@/components/ui/Separator'
-import Movies from '@/components/home/movies/Movies'
-import Series from '@/components/home/series/Series'
+import HeroMovie from "@/components/home/heroMovie/Hero";
+import Separator from "@/components/ui/Separator";
+import Movies from "@/components/home/movies/Movies";
+import Series from "@/components/home/series/Series";
+import People from "@/components/home/people/People";
 
 export default function Home() {
   return (
     <div className="">
       <HeroMovie />
-      <div className='h-[200px] w-full' />
+      <div className="h-[200px] w-full" />
 
       <Separator />
 
@@ -17,6 +18,9 @@ export default function Home() {
 
       <Series />
 
+      <Separator />
+
+      <People />
     </div>
   );
 }
