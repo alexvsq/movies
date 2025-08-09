@@ -1,9 +1,11 @@
 "use client";
+import { useState, useEffect } from "react";
 import { ResponseTrendingType } from "@/types/trending";
-import { Play, Star } from "lucide-react";
-import { useState } from "react";
+import { Star } from "lucide-react";
 import { cutLargeText } from "@/lib/cutLargeText";
 import Link from "next/link";
+import BtnWatchTrailer from "./btnWatchTrailer";
+import Image from "next/image";
 
 export default function ContentTrending({
   data,
@@ -21,26 +23,43 @@ export default function ContentTrending({
       ? "/tv"
       : "";
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const newIndexCurrentItem = indexCurrentItem + 1;
+      setIndexCurrentItem(newIndexCurrentItem > 5 ? 0 : newIndexCurrentItem);
+    }, 15000);
+    return () => clearTimeout(timer);
+  }, [indexCurrentItem]);
+
+  const titleToShow = CURRENT_ITEM.title
+    ? CURRENT_ITEM.title
+    : CURRENT_ITEM.name;
+  const dateToShow = CURRENT_ITEM.release_date
+    ? CURRENT_ITEM.release_date
+    : CURRENT_ITEM.first_air_date;
+
   return (
     <section className="h-[750px] w-full relative">
-      <img
-        src={CURRENT_ITEM.backdrop_path}
+      <Image
+        src={CURRENT_ITEM.backdrop_path || ""}
         alt="movie"
         className="h-full w-full object-cover object-center absolute -z-10 image-gradient-transparent "
+        fill
       />
 
       <div className="container-dynamic h-full flex flex-col justify-center ">
         <header className="max-w-[470px] flex flex-col gap-3 min-h-[180px]">
-          <h2 className=" text-5xl font-semibold">{CURRENT_ITEM.title}</h2>
+          <h2 className=" text-5xl font-semibold">{titleToShow}</h2>
           <div className="flex gap-2 items-center text-sm">
             <div className="bg-primary px-2 rounded">
               <Star fill="black" stroke="black" className="w-3" />
             </div>
             <p>
-              {CURRENT_ITEM.vote_average} ({CURRENT_ITEM.vote_count}){" "}
+              {CURRENT_ITEM.vote_average.toFixed(1)} (
+              {CURRENT_ITEM.vote_count.toLocaleString()}){" "}
             </p>
             <p>•</p>
-            <p className="text-text-secondary">{CURRENT_ITEM.release_date}</p>
+            <p className="text-text-secondary">{dateToShow}</p>
           </div>
           <p>{cutLargeText(CURRENT_ITEM.overview, 170)}</p>
         </header>
@@ -52,10 +71,7 @@ export default function ContentTrending({
             </button>
           </Link>
           <Link href={linkTo + `/${CURRENT_ITEM.id}`}>
-            <button className="flex items-center gap-2 bg-primary text-black py-2 px-4 rounded-lg justify-center min-w-40 hover:-translate-y-1 transition cursor-pointer">
-              <Play fill="currentColor" />
-              <p className="font-medium">Watch Trailer</p>
-            </button>
+            <BtnWatchTrailer />
           </Link>
         </footer>
 
@@ -64,7 +80,7 @@ export default function ContentTrending({
 
           <div className="w-[1300px] h-80 bg-[#C4C4C4]/10 backdrop-blur-xs rounded-3xl border border-white/20">
             <div className="flex justify-between w-full h-full p-4">
-              {data.results.slice(0, 6).map((movie, index) => (
+              {data.results.map((movie, index) => (
                 <article
                   key={index}
                   onMouseOver={() => setIndexCurrentItem(index)}
@@ -74,10 +90,12 @@ export default function ContentTrending({
                       : ""
                   }`}
                 >
-                  <img
-                    src={movie.poster_path}
-                    alt={movie.title}
+                  <Image
+                    src={movie.poster_path || ""}
+                    alt={movie.title || ""}
                     className="w-full h-full object-cover"
+                    width={190}
+                    height={280}
                   />
                 </article>
               ))}

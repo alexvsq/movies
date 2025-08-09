@@ -14,6 +14,8 @@ export default function userScore() {
 
   const setUserScoreInParamsDebounce = useDebouncedCallback(() => {
     const params = new URLSearchParams(searchParams.toString());
+    params.delete("page");
+
     if (timeRange[0] === 0 && timeRange[1] === 10) {
       params.delete("vote_average_gte");
       params.delete("vote_average_lte");

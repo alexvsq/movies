@@ -1,11 +1,11 @@
-import { PeopleResponseSchema } from "@/types/people";
+import { GenresResponseSchema } from "@/types/series";
 
 const BASE_URL = process.env.BASE_URL || "";
 const API_KEY = process.env.API_KEY || "";
 
-export const getPeople = async () => {
+export const getGenresTv = async () => {
   try {
-    const url = new URL("person/popular", BASE_URL);
+    const url = new URL("genre/tv/list", BASE_URL);
     const options = {
       method: "GET",
       headers: {
@@ -13,16 +13,15 @@ export const getPeople = async () => {
         Authorization: "Bearer " + API_KEY,
       },
     };
-
     const response = await fetch(url, options);
     if (!response.ok) {
-      throw new Error("Something went wrong fetching people");
+      throw new Error("Something went wrong fetching genres");
     }
     const dataJson = await response.json();
-    const data = await PeopleResponseSchema.parseAsync(dataJson);
+    const data = await GenresResponseSchema.parseAsync(dataJson);
     return data;
   } catch (error) {
     console.error(error);
-    throw new Error("Something went wrong fetching people");
+    throw new Error("Something went wrong fetching genres");
   }
 };

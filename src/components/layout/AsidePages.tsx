@@ -1,13 +1,13 @@
 import Separator from "@/components/ui/Separator";
-import OrderBy from "./filters/sortBy";
-import Genres from "./filters/Genres";
+import SortBy from "./filters/sortBy";
+import Genres from "./filters/genres";
 import TimeRange from "./filters/timeRange";
 import UserScore from "./filters/userScore";
 
-export default function AsidePages() {
+export default async function AsidePages() {
   return (
-    <aside className="col-span-1 bg-white/5 rounded-xl p-4 h-fit">
-      <OrderBy />
+    <aside className="md:col-span-1 fixed z-10 -bottom-2 md:-bottom-0 md:relative bg-bg-primary md:bg-white/5 rounded-xl p-4 h-fit min-h-40">
+      <SortBy />
 
       <Separator />
 

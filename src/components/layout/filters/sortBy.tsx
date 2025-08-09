@@ -19,6 +19,8 @@ export default function SortBy() {
     router.push(`${pathname}?${params.toString()}`);
   };
 
+  const optionsToShow = pathname.includes("/movies") ? options : optionsTv;
+
   return (
     <section className="my-2 flex flex-col gap-2">
       <p className="text-text-secondary">Sort by</p>
@@ -31,7 +33,7 @@ export default function SortBy() {
         id=""
         className="bg-white w-full p-2 rounded-lg text-black text-sm"
       >
-        {options.map((option, index) => (
+        {optionsToShow.map((option, index) => (
           <option key={index} value={option.value}>
             {option.label}
           </option>
@@ -56,6 +58,22 @@ const options = [
     label: "Release Date (Newest First)",
     value: "primary_release_date.desc",
   },
+  { label: "Vote Average (Low to High)", value: "vote_average.asc" },
+  { label: "Vote Average (High to Low)", value: "vote_average.desc" },
+  { label: "Vote Count (Low to High)", value: "vote_count.asc" },
+  { label: "Vote Count (High to Low)", value: "vote_count.desc" },
+];
+
+const optionsTv = [
+  { label: "", value: "" },
+  { label: "First Air Date (Oldest First)", value: "first_air_date.asc" },
+  { label: "First Air Date (Newest First)", value: "first_air_date.desc" },
+  { label: "Name (A-Z)", value: "name.asc" },
+  { label: "Name (Z-A)", value: "name.desc" },
+  { label: "Original Name (A-Z)", value: "original_name.asc" },
+  { label: "Original Name (Z-A)", value: "original_name.desc" },
+  { label: "Popularity (Low to High)", value: "popularity.asc" },
+  { label: "Popularity (High to Low)", value: "popularity.desc" },
   { label: "Vote Average (Low to High)", value: "vote_average.asc" },
   { label: "Vote Average (High to Low)", value: "vote_average.desc" },
   { label: "Vote Count (Low to High)", value: "vote_count.asc" },

@@ -1,9 +1,13 @@
 "use client";
 import { List, Heart, Bookmark, Play } from "lucide-react";
-import { MovieDetailType } from "@/types/movie";
+import { TvDetailType } from "@/types/series";
 import { useFrameIsOpenStore } from "@/store/framerYoutubeStore";
 
-export default function accountButtons({ movie }: { movie: MovieDetailType }) {
+export default function accountButtons({
+  serieData,
+}: {
+  serieData: TvDetailType;
+}) {
   const { isOpen, setIsOpen } = useFrameIsOpenStore();
 
   const buttons = [

@@ -88,3 +88,88 @@ export const GenresResponseSchema = z.object({
   genres: z.array(GenreSchema),
 });
 export type GenresResponseType = z.infer<typeof GenresResponseSchema>;
+
+export const VideoFromMovieResponseSchema = z.object({
+  id: z.number().default(0),
+  results: z.array(
+    z.object({
+      iso_639_1: z.string(),
+      iso_3166_1: z.string(),
+      name: z.string(),
+      key: z.string(),
+      site: z.string(),
+      size: z.number().default(0),
+      type: z.string(),
+      official: z.boolean().default(true),
+      published_at: z.string(),
+      id: z.string(),
+    })
+  ),
+});
+export type VideosFromMovieResponseType = z.infer<
+  typeof VideoFromMovieResponseSchema
+>;
+
+const personCreditSchema = z.object({
+  adult: z.boolean().default(true),
+  gender: z.number().default(0),
+  id: z.number().default(0),
+  known_for_department: z.string(),
+  name: z.string(),
+  original_name: z.string(),
+  popularity: z.number().default(0),
+  profile_path: z.string().nullable(),
+  credit_id: z.string(),
+});
+
+const castCreditMovieSchema = personCreditSchema.extend({
+  cast_id: z.number().default(0),
+  character: z.string(),
+  order: z.number().default(0),
+});
+
+const crewCreditMovieSchema = personCreditSchema.extend({
+  department: z.string(),
+  job: z.string(),
+});
+
+export const responseCreditMovieSchema = z.object({
+  id: z.number().default(0),
+  cast: z.array(castCreditMovieSchema),
+  crew: z.array(crewCreditMovieSchema),
+});
+
+export type ResponseCreditMovieType = z.infer<typeof responseCreditMovieSchema>;
+
+export const movieRecommendationsSchema = z.object({
+  adult: z.boolean(),
+  backdrop_path: z.string().nullable(),
+  id: z.number(),
+  title: z.string(),
+  original_title: z.string(),
+  overview: z.string(),
+  poster_path: z.string().nullable(),
+  media_type: z.string(),
+  original_language: z.string(),
+  genre_ids: z.array(z.number()),
+  popularity: z.number(),
+  release_date: z.string(),
+  video: z.boolean(),
+  vote_average: z.number(),
+  vote_count: z.number(),
+});
+
+export type MovieRecommendationType = z.infer<
+  typeof movieRecommendationsSchema
+>;
+
+export const responseMovieRecommendationsSchema = z.object({
+  page: z.number(),
+  results: z.array(movieRecommendationsSchema),
+  total_pages: z.number(),
+  total_results: z.number(),
+});
+
+export type ResponseMovieRecommendationsType = z.infer<
+  typeof responseMovieRecommendationsSchema
+>;

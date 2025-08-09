@@ -1,18 +1,10 @@
 import { Clapperboard } from "lucide-react";
-import DATA_FAKE from "@/data/DATA_MOVIES.json";
-import CarouselItems from "@/components/shared/CarouselMovies";
 import ButtonSecondary from "@/components/shared/ButtonSecondary";
 import Link from "next/link";
-
-const baseUrlImage = process.env.BASE_URL_IMAGE || "";
+import { Suspense } from "react";
+import MoviesContent from "./MoviesContent";
 
 export default function Movies() {
-  const dataWithImages = DATA_FAKE.results.map((movie, index) => ({
-    ...movie,
-    backdrop_path: baseUrlImage + "p/original" + movie.backdrop_path,
-    poster_path: baseUrlImage + "p/w500" + movie.poster_path,
-  }));
-
   return (
     <section className="">
       <header className="flex justify-between py-2 container-dynamic">
@@ -25,8 +17,9 @@ export default function Movies() {
           <ButtonSecondary title="View More" />
         </Link>
       </header>
-
-      <CarouselItems items={dataWithImages} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <MoviesContent />
+      </Suspense>
     </section>
   );
 }

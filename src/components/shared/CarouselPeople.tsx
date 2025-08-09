@@ -1,11 +1,11 @@
 "use client";
-import CardItem from "@/components/shared/CardMovie";
+import CardPeople from "./CardPeople";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
-import { MovieType } from "@/types/movie";
+import { PeopleType } from "@/types/people";
 
 interface CarouselItemsProps {
-  items: MovieType[];
+  items: PeopleType[];
 }
 
 export default function CarouselItems({ items }: CarouselItemsProps) {
@@ -28,7 +28,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
         <div className="embla__container">
           {items.map((item, index) => (
             <div className="embla__slide" key={item.id}>
-              <CardItem item={item} />
+              <CardPeople item={item} />
             </div>
           ))}
         </div>

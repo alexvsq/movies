@@ -3,11 +3,12 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { GenresResponseType } from "@/types/movie";
 
-export default function Genre({
-  genresData,
-}: {
-  genresData: GenresResponseType;
-}) {
+interface GenreProps {
+  genresMovies: GenresResponseType;
+  genresTv: GenresResponseType;
+}
+
+export default function Genre({ genresMovies, genresTv }: GenreProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -25,7 +26,7 @@ export default function Genre({
 
   const setGenereInParams = () => {
     const params = new URLSearchParams(searchParams.toString());
-
+    params.delete("page");
     if (genresState.length == 0) {
       params.delete("genre");
       router.push(`${pathname}?${params.toString()}`);
@@ -39,13 +40,17 @@ export default function Genre({
     router.push(`${pathname}?${params.toString()}`);
   };
 
+  const GenresList = pathname.includes("/movies")
+    ? genresMovies.genres
+    : genresTv.genres;
+
   useEffect(() => {
     setGenereInParams();
   }, [genresState]);
 
   return (
     <div className="flex flex-wrap gap-2">
-      {genresData.genres.map((genre, index) => (
+      {GenresList.map((genre, index) => (
         <button
           key={genre.id}
           onClick={() => {

@@ -14,6 +14,8 @@ export default function timeRange() {
 
   const setTimeRangeInParamsDebounce = useDebouncedCallback(() => {
     const params = new URLSearchParams(searchParams.toString());
+    params.delete("page");
+
     if (timeRange[0] === 0 && timeRange[1] === 360) {
       params.delete("with_runtime_gte");
       params.delete("with_runtime_lte");

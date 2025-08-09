@@ -8,6 +8,7 @@ export const discoverMovies = async (searchParams: filtersType) => {
   try {
     const url = new URL("discover/movie", BASE_URL);
     url.searchParams.set("page", searchParams.page || "1");
+    url.searchParams.set("include_adult", "false");
 
     if (searchParams.sort_by) {
       url.searchParams.set("sort_by", searchParams.sort_by);

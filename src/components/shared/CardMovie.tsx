@@ -1,7 +1,8 @@
 import { MovieType } from "@/types/movie";
 import { cutLargeText } from "@/lib/cutLargeText";
-import { Star } from "lucide-react";
+import { Star, ImageOff } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CardItemProps {
   item: MovieType;
@@ -19,13 +20,17 @@ export default function CardItem({ item }: CardItemProps) {
     >
       <div className="w-full h-[300px] rounded-lg overflow-hidden group cursor-pointer  hover:-translate-y-2 transition">
         {item.poster_path ? (
-          <img
+          <Image
             src={item.poster_path}
             alt={item.title}
             className="w-full h-full object-cover group-hover:scale-105 transition"
+            width={200}
+            height={300}
           />
         ) : (
-          <div className="w-full h-full bg-gray-200 "></div>
+          <div className="w-full h-full bg-white/5 rounded-lg flex items-center justify-center">
+            <ImageOff />
+          </div>
         )}
       </div>
       <p className="text-lg font-medium">{shortTitle}</p>

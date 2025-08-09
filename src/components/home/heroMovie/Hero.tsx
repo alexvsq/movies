@@ -1,4 +1,4 @@
-import { getTrending } from "@/api/trending";
+import { getAllTrending } from "@/api/trending";
 import ContentTrending from "./contentTrending";
 
 export default async function HeroMovie() {
@@ -7,14 +7,18 @@ export default async function HeroMovie() {
     throw new Error("BASE_URL_IMAGE is not defined in environment variables.");
   }
 
-  let DATA_TRENDING = await getTrending();
+  let DATA_TRENDING = await getAllTrending();
 
   const data = {
     ...DATA_TRENDING,
-    results: DATA_TRENDING.results.map((movie, index) => ({
+    results: DATA_TRENDING.results.slice(0, 6).map((movie, index) => ({
       ...movie,
-      backdrop_path: baseUrlImage + "p/original" + movie.backdrop_path,
-      poster_path: baseUrlImage + "p/w500" + movie.poster_path,
+      backdrop_path: movie.backdrop_path
+        ? baseUrlImage + "p/original" + movie.backdrop_path
+        : "",
+      poster_path: movie.poster_path
+        ? baseUrlImage + "p/w500" + movie.poster_path
+        : "",
     })),
   };
 
