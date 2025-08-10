@@ -19,12 +19,12 @@ export function SkeletonCardGrid() {
 export function SkeletonDetailContent() {
   return (
     <div className="container-dynamic flex flex-col md:flex-row md:items-center px-4 py-6 gap-8 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[720px]">
-      <article className="w-[300px] h-[450px] rounded-xl loading"></article>
+      <article className="w-full md:w-[300px] h-[450px] rounded-xl loading"></article>
 
       <aside className="flex flex-col gap-4">
-        <div className="h-10 w-80 rounded-xl loading"></div>
-        <div className="h-52 w-[800px] rounded-xl loading"></div>
-        <div className="h-8 w-40 rounded-full loading"></div>
+        <div className="h-10 w-full md:w-80 rounded-xl loading"></div>
+        <div className="h-52 w-full md:w-[800px] rounded-xl loading"></div>
+        <div className="h-8 w-full md:w-40 rounded-full loading"></div>
       </aside>
     </div>
   );
