@@ -8,16 +8,16 @@ export default function NextPrevBtns({
   prev: () => void;
 }) {
   return (
-    <div className="absolute z-30 top-1/2 -translate-y-1/2 w-full">
-      <div className="container-dynamic  w-full flex justify-between">
+    <div className="absolute z-30 top-[40%] -translate-y-[40%] w-full">
+      <div className="container-dynamic relative">
         <button
-          className="embla__prev bg-white/10 rounded-full w-10 aspect-square flex justify-center items-center"
+          className="embla__prev bg-white/10 rounded-full w-10 aspect-square flex justify-center items-center  left-0 absolute"
           onClick={prev}
         >
           <ChevronLeft size={40} className="cursor-pointer" />
         </button>
         <button
-          className="embla__next bg-white/10 rounded-full w-10 aspect-square flex justify-center items-center"
+          className="embla__next bg-white/10 rounded-full w-10 aspect-square flex justify-center items-center  right-0 absolute"
           onClick={next}
         >
           <ChevronRight size={40} className="cursor-pointer" />
