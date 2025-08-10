@@ -240,7 +240,7 @@ export const TvListItemSchema = z.object({
 
 export const ResponseTvListSchema = z.object({
   page: z.number(),
-  results: z.array(TvListItemSchema),
+  results: z.array(tvSchema),
   total_pages: z.number(),
   total_results: z.number(),
 });
