@@ -3,6 +3,7 @@ import CardTv from "@/components/shared/CardTv";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import { TvType } from "@/types/series";
+import NextPrevBtns from "@/components/shared/NextPrevBtns";
 
 interface CarouselItemsProps {
   items: TvType[];
@@ -23,7 +24,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
   }, [emblaApi]);
 
   return (
-    <>
+    <div className="relative">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container py-2">
           {items.map((item, index) => (
@@ -33,13 +34,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
           ))}
         </div>
       </div>
-
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
-      </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
-      </button>
-    </>
+      <NextPrevBtns next={scrollNext} prev={scrollPrev} />
+    </div>
   );
 }

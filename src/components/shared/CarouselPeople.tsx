@@ -3,6 +3,7 @@ import CardPeople from "./CardPeople";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import { PeopleType } from "@/types/people";
+import NextPrevBtns from "@/components/shared/NextPrevBtns";
 
 interface CarouselItemsProps {
   items: PeopleType[];
@@ -23,7 +24,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
   }, [emblaApi]);
 
   return (
-    <>
+    <div className="relative">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           {items.map((item, index) => (
@@ -34,12 +35,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
         </div>
       </div>
 
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
-      </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
-      </button>
-    </>
+      <NextPrevBtns next={scrollNext} prev={scrollPrev} />
+    </div>
   );
 }

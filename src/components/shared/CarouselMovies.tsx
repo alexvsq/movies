@@ -3,6 +3,7 @@ import CardItem from "@/components/shared/CardMovie";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import { MovieType } from "@/types/movie";
+import NextPrevBtns from "@/components/shared/NextPrevBtns";
 
 interface CarouselItemsProps {
   items: MovieType[];
@@ -23,9 +24,9 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
   }, [emblaApi]);
 
   return (
-    <>
+    <div className="relative">
       <div className="embla" ref={emblaRef}>
-        <div className="embla__container">
+        <div className="embla__container ">
           {items.map((item, index) => (
             <div className="embla__slide" key={item.id}>
               <CardItem item={item} />
@@ -33,13 +34,7 @@ export default function CarouselItems({ items }: CarouselItemsProps) {
           ))}
         </div>
       </div>
-
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
-      </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
-      </button>
-    </>
+      <NextPrevBtns next={scrollNext} prev={scrollPrev} />
+    </div>
   );
 }
