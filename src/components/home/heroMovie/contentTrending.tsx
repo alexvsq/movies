@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ResponseTrendingType } from "@/types/trending";
-import { Star } from "lucide-react";
+import { Star, ChevronRight, ChevronLeft } from "lucide-react";
 import { cutLargeText } from "@/lib/cutLargeText";
 import Link from "next/link";
 import BtnWatchTrailer from "./btnWatchTrailer";
@@ -38,8 +38,15 @@ export default function ContentTrending({
     ? CURRENT_ITEM.release_date
     : CURRENT_ITEM.first_air_date;
 
+  const nextItem = () => {
+    setIndexCurrentItem(indexCurrentItem > 4 ? 0 : indexCurrentItem + 1);
+  };
+  const prevItem = () => {
+    setIndexCurrentItem(indexCurrentItem < 0 ? 4 : indexCurrentItem - 1);
+  };
+
   return (
-    <section className="h-[750px] w-full relative">
+    <section className="h-screen md:h-[750px] w-full relative md:mb-[250px] pt-10">
       <Image
         src={CURRENT_ITEM.backdrop_path || ""}
         alt="movie"
@@ -47,7 +54,30 @@ export default function ContentTrending({
         fill
       />
 
-      <div className="container-dynamic h-full flex flex-col justify-center ">
+      <div className="container-dynamic h-full flex flex-col justify-center gap-3 md:justify-center">
+        {/* MOBILE */}
+        <article className="md:hidden mx-auto relative">
+          <div
+            onClick={prevItem}
+            className="absolute -left-10 top-1/2 -translate-y-1/2"
+          >
+            <ChevronLeft size={30} />
+          </div>
+          <Image
+            src={data.results[indexCurrentItem].poster_path || ""}
+            alt={data.results[indexCurrentItem].title || ""}
+            className="w-full h-full max-w-[300px] object-cover rounded-lg"
+            width={190}
+            height={280}
+          />
+          <div
+            onClick={nextItem}
+            className="absolute -right-10 top-1/2 -translate-y-1/2"
+          >
+            <ChevronRight size={30} />
+          </div>
+        </article>
+        {/*  */}
         <header className="max-w-[470px] flex flex-col gap-3 min-h-[180px]">
           <h2 className=" text-5xl font-semibold">{titleToShow}</h2>
           <div className="flex gap-2 items-center text-sm">
@@ -75,7 +105,8 @@ export default function ContentTrending({
           </Link>
         </footer>
 
-        <article className="w-[1300px]  absolute bottom-0 translate-y-1/2 ">
+        {/* DESKTOP */}
+        <article className="hidden md:block w-[1300px]  absolute bottom-0 translate-y-1/2 ">
           <h3 className=" pb-5 font-medium">Trending</h3>
 
           <div className="w-[1300px] h-80 bg-[#C4C4C4]/10 backdrop-blur-xs rounded-3xl border border-white/20">
