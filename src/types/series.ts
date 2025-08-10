@@ -220,3 +220,29 @@ export const CreditsSchema = z.object({
 });
 
 export type CreditsType = z.infer<typeof CreditsSchema>;
+
+export const TvListItemSchema = z.object({
+  adult: z.boolean(),
+  backdrop_path: z.string(),
+  genre_ids: z.array(z.number()),
+  id: z.number(),
+  origin_country: z.array(z.string()),
+  original_language: z.string(),
+  original_name: z.string(),
+  overview: z.string(),
+  popularity: z.number(),
+  poster_path: z.string(),
+  first_air_date: z.string(),
+  name: z.string(),
+  vote_average: z.number(),
+  vote_count: z.number(),
+});
+
+export const ResponseTvListSchema = z.object({
+  page: z.number(),
+  results: z.array(TvListItemSchema),
+  total_pages: z.number(),
+  total_results: z.number(),
+});
+
+export type ResponseTvListType = z.infer<typeof ResponseTvListSchema>;
