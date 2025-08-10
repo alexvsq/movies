@@ -1,7 +1,7 @@
 import { Info, ImageOff } from "lucide-react";
 import { formatMinutesToHM } from "@/lib/formatHours";
 import Percentage from "@/components/ui/Percentage";
-import AccountButtons from "@/components/detail/movies/AccountButtons";
+import TrailerButton from "@/components/detail/movies/trailerButton";
 import { getDetailMovie } from "@/api/movies/detail";
 import { getVideosFromMovie } from "@/api/movies/detail";
 import FrameVideoYoutube from "@/components/shared/frameVIdeoYoutube";
@@ -70,7 +70,7 @@ export default async function ContentDetailMovie({
                   </p>
                 </article>
 
-                <AccountButtons movie={DETAIL_MOVIE} />
+                <TrailerButton movie={DETAIL_MOVIE} />
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default async function ContentDetailMovie({
                 <p>{DETAIL_MOVIE.overview}</p>
               </article>
 
-              <AccountButtons movie={DETAIL_MOVIE} />
+              <TrailerButton movie={DETAIL_MOVIE} />
             </div>
           </div>
         </div>
