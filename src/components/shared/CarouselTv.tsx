@@ -11,7 +11,7 @@ interface CarouselItemsProps {
 export default function CarouselItems({ items }: CarouselItemsProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
   });
 
   const scrollPrev = useCallback(() => {
