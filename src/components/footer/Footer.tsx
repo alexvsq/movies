@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
 
         <aside>
-          Proyect by{" "}
+          Project by{" "}
           <a
             href="https://portfolio-six-sooty-75.vercel.app/en/"
             target="_blank"
